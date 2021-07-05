@@ -1,0 +1,45 @@
+@use './partials/typography';
+@use './partials/header/logincontrol';
+@use './partials/header/navbar';
+@use './partials/header/usernav';
+@use './partials/header/hamburger';
+@use './partials/header/hamburger_active';
+@use './partials/footer/footer';
+@use './partials/buttons';
+@use './partials/links';
+@use './partials/input';
+@use './partials/themes/main-theme';
+@use './partials/themes/nintendo-theme';
+@use './partials/themes/ps-theme';
+@use './partials/themes/xbox-theme';
+@use './partials/index/index';
+@use './partials/itemComponent';
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Orbitron:wght@400;500;600&display=swap");
+@import "./partials/mediaquery";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+#root {
+  width: 100%;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+}
+
+#page-container {
+  width: 90vw;
+  margin: auto;
+  @include respond-to("wide") {
+    max-width: 1500px;
+  }
+}

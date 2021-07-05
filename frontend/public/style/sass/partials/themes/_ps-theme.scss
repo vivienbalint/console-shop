@@ -1,0 +1,62 @@
+@import "../variables";
+
+.ps-theme {
+  .primary-color {
+    color: $ps-primary;
+  }
+  .secondary-color {
+    color: $ps-secondary;
+  }
+  .primary-icon {
+    filter: $ps-icon-primary;
+  }
+  .secondary-icon {
+    filter: $ps-icon-secondary;
+  }
+  body {
+    background-color: $ps-bg;
+  }
+  .btn {
+    &-primary {
+      border: 1px solid $ps-primary;
+      &:hover {
+        border: 1px solid $ps-secondary;
+        color: $ps-primary;
+      }
+    }
+  }
+  .input {
+    &-primary {
+      border: 1px solid $ps-primary;
+      &::placeholder {
+        color: $ps-primary;
+      }
+      &:focus {
+        border: 1px dotted $ps-secondary;
+      }
+    }
+    &-secondary {
+      border: 1px solid $ps-secondary;
+      &:focus {
+        border: 1px dotted $ps-primary;
+      }
+    }
+  }
+  .nav-link {
+    &:hover {
+      background: linear-gradient(to bottom, $ps-secondary 50%, $ps-bg 50%);
+      background-size: 100% 200%;
+      background-position: top left;
+      transition: all 0.3s ease-out;
+      p {
+        color: $ps-bg;
+      }
+    }
+  }
+  .link-secondary.before:before,
+  .link-secondary.after:after,
+  .square:before,
+  .square:after {
+    background-color: $ps-secondary;
+  }
+}

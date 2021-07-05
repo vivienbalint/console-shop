@@ -1,0 +1,62 @@
+@import "../variables";
+
+.xbox-theme {
+  .primary-color {
+    color: $xbox-primary;
+  }
+  .secondary-color {
+    color: $xbox-secondary;
+  }
+  .primary-icon {
+    filter: $xbox-icon-primary;
+  }
+  .secondary-icon {
+    filter: $xbox-icon-secondary;
+  }
+  body {
+    background-color: $xbox-bg;
+  }
+  .btn {
+    &-primary {
+      border: 1px solid $xbox-primary;
+      &:hover {
+        border: 1px solid $xbox-secondary;
+        color: $xbox-primary;
+      }
+    }
+  }
+  .input {
+    &-primary {
+      border: 1px solid $xbox-primary;
+      &::placeholder {
+        color: $xbox-primary;
+      }
+      &:focus {
+        border: 1px dotted $xbox-secondary;
+      }
+    }
+    &-secondary {
+      border: 1px solid $xbox-secondary;
+      &:focus {
+        border: 1px dotted $xbox-primary;
+      }
+    }
+  }
+  .nav-link {
+    &:hover {
+      background: linear-gradient(to bottom, $xbox-secondary 50%, $xbox-bg 50%);
+      background-size: 100% 200%;
+      background-position: top left;
+      transition: all 0.3s ease-out;
+      p {
+        color: $xbox-bg;
+      }
+    }
+  }
+  .link-secondary.before:before,
+  .link-secondary.after:after,
+  .square:before,
+  .square:after {
+    background-color: $xbox-secondary;
+  }
+}

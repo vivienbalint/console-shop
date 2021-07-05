@@ -1,0 +1,133 @@
+@import "../variables";
+@import "../mediaquery";
+
+.main-theme {
+  background-color: $main-bg;
+  .primary-color {
+    color: $main-primary;
+  }
+  .secondary-color {
+    color: $main-secondary;
+  }
+  .text-color {
+    color: $main-text;
+  }
+  .primary-icon {
+    filter: $main-icon-primary;
+  }
+  .secondary-icon {
+    filter: $main-icon-secondary;
+  }
+  .focus {
+    &:focus {
+      outline: 1px dotted $main-secondary;
+    }
+    &-secondary:focus {
+      outline: 2px dotted $main-primary;
+    }
+  }
+
+  .login-form,
+  .full-height {
+    background-color: $main-bg;
+  }
+  .btn {
+    &-primary {
+      border: 1px solid $main-primary;
+      &:hover {
+        border: 1px solid $main-secondary;
+        color: $main-primary;
+      }
+    }
+    &-cart {
+      border: none;
+      background-color: $main-secondary;
+      color: $main-bg;
+      &:hover {
+        background-color: $main-primary;
+        color: $main-bg;
+      }
+    }
+  }
+  .input {
+    &-primary {
+      border: 1px solid $main-primary;
+      &::placeholder {
+        color: $main-primary;
+      }
+      &:focus {
+        border: 1px dotted $main-secondary;
+      }
+    }
+    &-secondary {
+      border: 1px solid $main-secondary;
+      &:focus {
+        border: 1px dotted $main-primary;
+      }
+    }
+  }
+  .nav-link {
+    border-bottom: 2px solid $main-secondary;
+    @include respond-to("desktop") {
+      border-bottom: none;
+      &:hover {
+        background: linear-gradient(
+          to bottom,
+          $main-secondary 50%,
+          $main-bg 50%
+        );
+        background-size: 100% 200%;
+        background-position: top left;
+        transition: all 0.3s ease-out;
+        p {
+          color: $main-bg;
+        }
+      }
+    }
+  }
+
+  .all-item-container {
+    border: 2px solid $main-text;
+    background-color: black;
+  }
+
+  .item-wrapper {
+    border: 2px solid $main-secondary;
+    background-color: black;
+  }
+
+  .hamburger {
+    border: 2px solid $main-secondary;
+  }
+
+  #footer {
+    border-top: 6px solid $main-secondary;
+  }
+
+  .link-secondary.before:before,
+  .link-secondary.after:after,
+  .square:before,
+  .square:after,
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after,
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: $main-secondary;
+  }
+
+  @keyframes color-change {
+    0% {
+      color: $main-secondary;
+    }
+
+    50% {
+      color: $main-primary;
+    }
+
+    100% {
+      color: $main-secondary;
+    }
+  }
+}

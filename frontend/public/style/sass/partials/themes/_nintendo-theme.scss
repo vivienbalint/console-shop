@@ -1,0 +1,66 @@
+@import "../variables";
+
+.nintendo-theme {
+  .primary-color {
+    color: $nintendo-primary;
+  }
+  .secondary-color {
+    color: $nintendo-secondary;
+  }
+  .primary-icon {
+    filter: $nintendo-icon-primary;
+  }
+  .secondary-icon {
+    filter: $nintendo-icon-secondary;
+  }
+  body {
+    background-color: $nintendo-bg;
+  }
+  .btn {
+    &-primary {
+      border: 1px solid $nintendo-primary;
+      &:hover {
+        border: 1px solid $nintendo-secondary;
+        color: $nintendo-primary;
+      }
+    }
+  }
+  .input {
+    &-primary {
+      border: 1px solid $nintendo-primary;
+      &::placeholder {
+        color: $nintendo-primary;
+      }
+      &:focus {
+        border: 1px dotted $nintendo-secondary;
+      }
+    }
+    &-secondary {
+      border: 1px solid $nintendo-secondary;
+      &:focus {
+        border: 1px dotted $nintendo-primary;
+      }
+    }
+  }
+  .nav-link {
+    &:hover {
+      background: linear-gradient(
+        to bottom,
+        $nintendo-secondary 50%,
+        $nintendo-bg 50%
+      );
+      background-size: 100% 200%;
+      background-position: top left;
+      transition: all 0.3s ease-out;
+      p {
+        color: $nintendo-bg;
+      }
+    }
+  }
+  .link-secondary.before:before,
+  .link-secondary.after:after,
+  .square:before,
+  .square:after {
+    background-color: $nintendo-secondary;
+  }
+}

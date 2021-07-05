@@ -1,0 +1,12 @@
+@import "variables";
+
+body,
+.login-form label,
+.main-component-text {
+  font-family: $secondary-font;
+}
+
+.title,
+.component-title {
+  font-family: $main-font;
+}

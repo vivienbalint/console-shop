@@ -1,0 +1,84 @@
+@import "../variables";
+@import "../mediaquery";
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+.header-container {
+  position: absolute;
+  top: 0;
+  width: 90vw;
+  @include respond-to("tablet") {
+    padding: 15px 0;
+  }
+  @include respond-to("desktop") {
+    padding: 0;
+  }
+  @include respond-to("wide") {
+    max-width: 1500px;
+  }
+}
+
+.hamburger-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  @include respond-to("desktop") {
+    width: auto;
+  }
+}
+
+.nav {
+  display: none;
+  @include respond-to("desktop") {
+    display: flex;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 12px;
+  @include respond-to("tablet") {
+    font-size: 18px;
+  }
+  @include respond-to("desktop") {
+    font-size: 20px;
+  }
+}
+
+.logo-img {
+  width: 35px;
+  padding-left: 10px;
+  @include respond-to("tablet") {
+    width: 50px;
+  }
+  @include respond-to("desktop") {
+    max-width: 60px;
+  }
+}
+
+.icon {
+  max-width: 20px;
+  width: 50%;
+}
+
+.search-bar {
+  padding: 0;
+  margin: 20px 0 0 19px;
+  @include respond-to("desktop") {
+    padding-left: 20px;
+    margin: 0;
+  }
+}
+
+.searchbar-btn {
+  position: relative;
+  right: 40px;
+}

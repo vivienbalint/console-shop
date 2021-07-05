@@ -1,0 +1,64 @@
+@import "../variables";
+@import "../mediaquery";
+
+.login-container {
+  display: flex;
+}
+
+.login-btn {
+  position: relative;
+}
+
+.login-form {
+  position: absolute;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  width: 200px;
+
+  label {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .link {
+    padding-top: 20px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 5px 0;
+    margin: 10px auto;
+  }
+
+  @include respond-to("tablet") {
+    top: 60px;
+    width: 230px;
+  }
+
+  @include respond-to("desktop") {
+    top: 70px;
+    width: auto;
+
+    label {
+      padding: 5px 0;
+      font-size: 12px;
+    }
+
+    .link {
+      padding-top: 10px;
+      font-size: 12px;
+    }
+
+    .btn-primary {
+      margin: 5px auto;
+    }
+  }
+}
+
+.smooth-click {
+  transition: all 0.3s ease-out;
+}

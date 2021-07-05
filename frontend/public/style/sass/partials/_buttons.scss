@@ -1,0 +1,78 @@
+@import "./variables";
+@import "./mediaquery";
+@import "./keyframes";
+
+%shared-btn {
+  font-family: $main-font;
+  font-weight: 500;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover {
+    transition: 0.3s all ease;
+  }
+  @include respond-to("tablet") {
+    font-size: 17px;
+  }
+  @include respond-to("desktop") {
+    font-size: 15px;
+  }
+}
+
+.btn {
+  &-primary {
+    @extend %shared-btn;
+    margin-right: 15px;
+    padding: 8px 15px;
+    @include respond-to("tablet") {
+      padding: 12px 17px;
+    }
+    @include respond-to("desktop") {
+      padding: 8px 15px;
+    }
+  }
+  &-secondary {
+    @extend %shared-btn;
+    display: inline-block;
+    text-align: center;
+    width: 84px;
+    line-height: 2.5rem;
+    margin: 60px 5px 0;
+    font-size: 12px;
+    color: $main-primary;
+    border: 1px solid $main-secondary;
+    text-decoration: none;
+
+    @include respond-to("mobile") {
+      width: 100px;
+      line-height: 3rem;
+      margin: 80px 5px 0;
+      font-size: 14px;
+    }
+    @include respond-to("tablet") {
+      width: 130px;
+      margin: 100px 20px 0;
+    }
+    @include respond-to("desktop") {
+      margin: 50px 30px 0 10px;
+    }
+  }
+
+  &-cart {
+    @extend %shared-btn;
+    text-align: center;
+    font-weight: 600;
+    width: 90px;
+    height: 50px;
+    float: right;
+    &:hover {
+      animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    }
+    @include respond-to("tablet") {
+      width: 95px;
+      font-size: 14px;
+    }
+    @include respond-to("desktop") {
+      width: 105px;
+    }
+  }
+}

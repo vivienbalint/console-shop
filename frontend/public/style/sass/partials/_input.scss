@@ -1,0 +1,30 @@
+@import "../partials/variables";
+@import "../partials/mediaquery";
+
+%input-shared {
+  background-color: transparent;
+  font-family: $secondary-font;
+  &:focus {
+    outline: none;
+  }
+}
+
+.input {
+  &-primary {
+    @extend %input-shared;
+    padding: 10px 10px;
+    @include respond-to("tablet") {
+      padding: 15px 15px;
+      width: 225px;
+    }
+    @include respond-to("desktop") {
+      margin-right: 10px;
+      padding: 10px 10px;
+      width: auto;
+    }
+  }
+  &-secondary {
+    @extend %input-shared;
+    padding: 5px 3px;
+  }
+}

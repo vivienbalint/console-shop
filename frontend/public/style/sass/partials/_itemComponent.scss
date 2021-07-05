@@ -1,0 +1,109 @@
+@import "../partials/mediaquery";
+@import "../partials/variables";
+
+.all-item-container {
+  margin: 80px 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .all-item-wrapper {
+    padding: 25px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond-to("desktop") {
+      padding: 25px 10px;
+    }
+  }
+
+  .item-grid-wrapper {
+    padding: 15px 0;
+  }
+
+  .component-link {
+    width: 100%;
+  }
+}
+
+.item {
+  &-wrapper {
+    width: 240px;
+    height: 250px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    text-align: center;
+
+    @include respond-to("desktop") {
+      width: 310px;
+      height: 350px;
+    }
+  }
+  &-img {
+    width: 190px;
+
+    @include respond-to("desktop") {
+      width: 300px;
+    }
+  }
+  &-name {
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+  &-text {
+    &-wrapper {
+      padding-top: 10px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      text-align: left;
+    }
+    &-sub-wrapper {
+      width: 205px;
+      float: left;
+      @include respond-to("desktop") {
+        width: 205px;
+      }
+    }
+  }
+}
+
+.games {
+  .item-img {
+    width: auto;
+    height: 150px;
+  }
+}
+
+.sub-page-img {
+  height: 500px;
+}
+
+.component-wrapper {
+  display: flex;
+  align-items: center;
+  .main-component-text-wrapper {
+    // width: 700px;
+  }
+
+  .main-component-text {
+    font-size: 25px;
+    line-height: 150%;
+  }
+}
+
+.main-component-img {
+  width: 100vw;
+
+  @include respond-to("tablet") {
+    height: 500px;
+    width: auto;
+  }
+
+  @include respond-to("desktop") {
+    height: 700px;
+  }
+}
