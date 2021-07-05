@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const db = require("./db");
+const inventoryRouter = require("./routes/inventory-router");
 const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
@@ -24,5 +25,7 @@ db.on("error", console.error.bind(console, "MongoDB connection error: "));
 app.get("/", (req, res) => {
   res.send("It Works!");
 });
+
+app.use("/api", inventoryRouter);
 
 app.listen(port, () => console.log(`Server started on port : ${port}`));
