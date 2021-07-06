@@ -1,11 +1,16 @@
 @import "../variables";
+@import "../mediaquery";
 
 .nintendo-theme {
+  background-color: $nintendo-bg;
   .primary-color {
     color: $nintendo-primary;
   }
   .secondary-color {
     color: $nintendo-secondary;
+  }
+  .text-color {
+    color: $nintendo-text;
   }
   .primary-icon {
     filter: $nintendo-icon-primary;
@@ -13,7 +18,17 @@
   .secondary-icon {
     filter: $nintendo-icon-secondary;
   }
-  body {
+  .focus {
+    &:focus {
+      outline: 1px dotted $nintendo-secondary;
+    }
+    &-secondary:focus {
+      outline: 2px dotted $nintendo-primary;
+    }
+  }
+
+  .login-form,
+  .full-height {
     background-color: $nintendo-bg;
   }
   .btn {
@@ -22,6 +37,15 @@
       &:hover {
         border: 1px solid $nintendo-secondary;
         color: $nintendo-primary;
+      }
+    }
+    &-cart {
+      border: none;
+      background-color: $nintendo-secondary;
+      color: $nintendo-bg;
+      &:hover {
+        background-color: $nintendo-primary;
+        color: $nintendo-bg;
       }
     }
   }
@@ -43,24 +67,67 @@
     }
   }
   .nav-link {
-    &:hover {
-      background: linear-gradient(
-        to bottom,
-        $nintendo-secondary 50%,
-        $nintendo-bg 50%
-      );
-      background-size: 100% 200%;
-      background-position: top left;
-      transition: all 0.3s ease-out;
-      p {
-        color: $nintendo-bg;
+    border-bottom: 2px solid $nintendo-secondary;
+    @include respond-to("desktop") {
+      border-bottom: none;
+      &:hover {
+        background: linear-gradient(
+          to bottom,
+          $nintendo-secondary 50%,
+          $nintendo-bg 50%
+        );
+        background-size: 100% 200%;
+        background-position: top left;
+        transition: all 0.3s ease-out;
+        p {
+          color: $nintendo-bg;
+        }
       }
     }
   }
+
+  .all-item-container {
+    border: 2px solid $nintendo-text;
+    background-color: transparent;
+  }
+
+  .item-wrapper {
+    border: 2px solid $nintendo-secondary;
+    background-color: transparent;
+  }
+
+  .hamburger {
+    border: 2px solid $nintendo-secondary;
+  }
+
+  #footer {
+    border-top: 6px solid $nintendo-secondary;
+  }
+
   .link-secondary.before:before,
   .link-secondary.after:after,
   .square:before,
-  .square:after {
+  .square:after,
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after,
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
     background-color: $nintendo-secondary;
+  }
+
+  @keyframes color-change {
+    0% {
+      color: $nintendo-secondary;
+    }
+
+    50% {
+      color: $nintendo-primary;
+    }
+
+    100% {
+      color: $nintendo-secondary;
+    }
   }
 }

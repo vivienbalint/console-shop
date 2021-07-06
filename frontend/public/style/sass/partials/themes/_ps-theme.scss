@@ -1,11 +1,16 @@
 @import "../variables";
+@import "../mediaquery";
 
 .ps-theme {
+  background-color: $ps-bg;
   .primary-color {
     color: $ps-primary;
   }
   .secondary-color {
     color: $ps-secondary;
+  }
+  .text-color {
+    color: $ps-text;
   }
   .primary-icon {
     filter: $ps-icon-primary;
@@ -13,7 +18,17 @@
   .secondary-icon {
     filter: $ps-icon-secondary;
   }
-  body {
+  .focus {
+    &:focus {
+      outline: 1px dotted $ps-secondary;
+    }
+    &-secondary:focus {
+      outline: 2px dotted $ps-primary;
+    }
+  }
+
+  .login-form,
+  .full-height {
     background-color: $ps-bg;
   }
   .btn {
@@ -22,6 +37,15 @@
       &:hover {
         border: 1px solid $ps-secondary;
         color: $ps-primary;
+      }
+    }
+    &-cart {
+      border: none;
+      background-color: $ps-secondary;
+      color: $ps-bg;
+      &:hover {
+        background-color: $ps-primary;
+        color: $ps-bg;
       }
     }
   }
@@ -43,20 +67,63 @@
     }
   }
   .nav-link {
-    &:hover {
-      background: linear-gradient(to bottom, $ps-secondary 50%, $ps-bg 50%);
-      background-size: 100% 200%;
-      background-position: top left;
-      transition: all 0.3s ease-out;
-      p {
-        color: $ps-bg;
+    border-bottom: 2px solid $ps-secondary;
+    @include respond-to("desktop") {
+      border-bottom: none;
+      &:hover {
+        background: linear-gradient(to bottom, $ps-secondary 50%, $ps-bg 50%);
+        background-size: 100% 200%;
+        background-position: top left;
+        transition: all 0.3s ease-out;
+        p {
+          color: $ps-bg;
+        }
       }
     }
   }
+
+  .all-item-container {
+    border: 2px solid $ps-text;
+    background-color: transparent;
+  }
+
+  .item-wrapper {
+    border: 2px solid $ps-secondary;
+    background-color: transparent;
+  }
+
+  .hamburger {
+    border: 2px solid $ps-secondary;
+  }
+
+  #footer {
+    border-top: 6px solid $ps-secondary;
+  }
+
   .link-secondary.before:before,
   .link-secondary.after:after,
   .square:before,
-  .square:after {
+  .square:after,
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after,
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
     background-color: $ps-secondary;
+  }
+
+  @keyframes color-change {
+    0% {
+      color: $ps-secondary;
+    }
+
+    50% {
+      color: $ps-primary;
+    }
+
+    100% {
+      color: $ps-secondary;
+    }
   }
 }

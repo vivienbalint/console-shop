@@ -1,11 +1,16 @@
 @import "../variables";
+@import "../mediaquery";
 
 .xbox-theme {
+  background-color: $xbox-bg;
   .primary-color {
     color: $xbox-primary;
   }
   .secondary-color {
     color: $xbox-secondary;
+  }
+  .text-color {
+    color: $xbox-text;
   }
   .primary-icon {
     filter: $xbox-icon-primary;
@@ -13,7 +18,17 @@
   .secondary-icon {
     filter: $xbox-icon-secondary;
   }
-  body {
+  .focus {
+    &:focus {
+      outline: 1px dotted $xbox-secondary;
+    }
+    &-secondary:focus {
+      outline: 2px dotted $xbox-primary;
+    }
+  }
+
+  .login-form,
+  .full-height {
     background-color: $xbox-bg;
   }
   .btn {
@@ -22,6 +37,15 @@
       &:hover {
         border: 1px solid $xbox-secondary;
         color: $xbox-primary;
+      }
+    }
+    &-cart {
+      border: none;
+      background-color: $xbox-secondary;
+      color: $xbox-bg;
+      &:hover {
+        background-color: $xbox-primary;
+        color: $xbox-bg;
       }
     }
   }
@@ -43,20 +67,67 @@
     }
   }
   .nav-link {
-    &:hover {
-      background: linear-gradient(to bottom, $xbox-secondary 50%, $xbox-bg 50%);
-      background-size: 100% 200%;
-      background-position: top left;
-      transition: all 0.3s ease-out;
-      p {
-        color: $xbox-bg;
+    border-bottom: 2px solid $xbox-secondary;
+    @include respond-to("desktop") {
+      border-bottom: none;
+      &:hover {
+        background: linear-gradient(
+          to bottom,
+          $xbox-secondary 50%,
+          $xbox-bg 50%
+        );
+        background-size: 100% 200%;
+        background-position: top left;
+        transition: all 0.3s ease-out;
+        p {
+          color: $xbox-bg;
+        }
       }
     }
   }
+
+  .all-item-container {
+    border: 2px solid $xbox-text;
+    background-color: transparent;
+  }
+
+  .item-wrapper {
+    border: 2px solid $xbox-secondary;
+    background-color: transparent;
+  }
+
+  .hamburger {
+    border: 2px solid $xbox-secondary;
+  }
+
+  #footer {
+    border-top: 6px solid $xbox-secondary;
+  }
+
   .link-secondary.before:before,
   .link-secondary.after:after,
   .square:before,
-  .square:after {
+  .square:after,
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after,
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
     background-color: $xbox-secondary;
+  }
+
+  @keyframes color-change {
+    0% {
+      color: $xbox-secondary;
+    }
+
+    50% {
+      color: $xbox-primary;
+    }
+
+    100% {
+      color: $xbox-secondary;
+    }
   }
 }

@@ -815,11 +815,17 @@ body,
   }
 }
 
+.nintendo-theme {
+  background-color: #eeeded;
+}
 .nintendo-theme .primary-color {
   color: #e60012;
 }
 .nintendo-theme .secondary-color {
   color: #00c3e3;
+}
+.nintendo-theme .text-color {
+  color: #414548;
 }
 .nintendo-theme .primary-icon {
   filter: invert(10%) sepia(100%) saturate(7052%) hue-rotate(351deg) brightness(87%) contrast(108%);
@@ -827,7 +833,14 @@ body,
 .nintendo-theme .secondary-icon {
   filter: invert(78%) sepia(25%) saturate(6464%) hue-rotate(140deg) brightness(87%) contrast(105%);
 }
-.nintendo-theme body {
+.nintendo-theme .focus:focus {
+  outline: 1px dotted #00c3e3;
+}
+.nintendo-theme .focus-secondary:focus {
+  outline: 2px dotted #e60012;
+}
+.nintendo-theme .login-form,
+.nintendo-theme .full-height {
   background-color: #eeeded;
 }
 .nintendo-theme .btn-primary {
@@ -836,6 +849,15 @@ body,
 .nintendo-theme .btn-primary:hover {
   border: 1px solid #00c3e3;
   color: #e60012;
+}
+.nintendo-theme .btn-cart {
+  border: none;
+  background-color: #00c3e3;
+  color: #eeeded;
+}
+.nintendo-theme .btn-cart:hover {
+  background-color: #e60012;
+  color: #eeeded;
 }
 .nintendo-theme .input-primary {
   border: 1px solid #e60012;
@@ -852,27 +874,72 @@ body,
 .nintendo-theme .input-secondary:focus {
   border: 1px dotted #e60012;
 }
-.nintendo-theme .nav-link:hover {
-  background: linear-gradient(to bottom, #00c3e3 50%, #eeeded 50%);
-  background-size: 100% 200%;
-  background-position: top left;
-  transition: all 0.3s ease-out;
+.nintendo-theme .nav-link {
+  border-bottom: 2px solid #00c3e3;
 }
-.nintendo-theme .nav-link:hover p {
-  color: #eeeded;
+@media (min-width: 1500px) {
+  .nintendo-theme .nav-link {
+    border-bottom: none;
+  }
+  .nintendo-theme .nav-link:hover {
+    background: linear-gradient(to bottom, #00c3e3 50%, #eeeded 50%);
+    background-size: 100% 200%;
+    background-position: top left;
+    transition: all 0.3s ease-out;
+  }
+  .nintendo-theme .nav-link:hover p {
+    color: #eeeded;
+  }
+}
+.nintendo-theme .all-item-container {
+  border: 2px solid #414548;
+  background-color: transparent;
+}
+.nintendo-theme .item-wrapper {
+  border: 2px solid #00c3e3;
+  background-color: transparent;
+}
+.nintendo-theme .hamburger {
+  border: 2px solid #00c3e3;
+}
+.nintendo-theme #footer {
+  border-top: 6px solid #00c3e3;
 }
 .nintendo-theme .link-secondary.before:before,
 .nintendo-theme .link-secondary.after:after,
 .nintendo-theme .square:before,
-.nintendo-theme .square:after {
+.nintendo-theme .square:after,
+.nintendo-theme .hamburger.is-active .hamburger-inner,
+.nintendo-theme .hamburger.is-active .hamburger-inner::before,
+.nintendo-theme .hamburger.is-active .hamburger-inner::after,
+.nintendo-theme .hamburger-inner,
+.nintendo-theme .hamburger-inner::before,
+.nintendo-theme .hamburger-inner::after {
   background-color: #00c3e3;
 }
+@keyframes color-change {
+  0% {
+    color: #00c3e3;
+  }
+  50% {
+    color: #e60012;
+  }
+  100% {
+    color: #00c3e3;
+  }
+}
 
+.ps-theme {
+  background-color: #000;
+}
 .ps-theme .primary-color {
   color: #fefefe;
 }
 .ps-theme .secondary-color {
   color: #003791;
+}
+.ps-theme .text-color {
+  color: #fefefe;
 }
 .ps-theme .primary-icon {
   filter: invert(100%) sepia(1%) saturate(7465%) hue-rotate(225deg) brightness(116%) contrast(99%);
@@ -880,7 +947,14 @@ body,
 .ps-theme .secondary-icon {
   filter: invert(14%) sepia(90%) saturate(2402%) hue-rotate(209deg) brightness(99%) contrast(105%);
 }
-.ps-theme body {
+.ps-theme .focus:focus {
+  outline: 1px dotted #003791;
+}
+.ps-theme .focus-secondary:focus {
+  outline: 2px dotted #fefefe;
+}
+.ps-theme .login-form,
+.ps-theme .full-height {
   background-color: #000;
 }
 .ps-theme .btn-primary {
@@ -889,6 +963,15 @@ body,
 .ps-theme .btn-primary:hover {
   border: 1px solid #003791;
   color: #fefefe;
+}
+.ps-theme .btn-cart {
+  border: none;
+  background-color: #003791;
+  color: #000;
+}
+.ps-theme .btn-cart:hover {
+  background-color: #fefefe;
+  color: #000;
 }
 .ps-theme .input-primary {
   border: 1px solid #fefefe;
@@ -905,27 +988,72 @@ body,
 .ps-theme .input-secondary:focus {
   border: 1px dotted #fefefe;
 }
-.ps-theme .nav-link:hover {
-  background: linear-gradient(to bottom, #003791 50%, #000 50%);
-  background-size: 100% 200%;
-  background-position: top left;
-  transition: all 0.3s ease-out;
+.ps-theme .nav-link {
+  border-bottom: 2px solid #003791;
 }
-.ps-theme .nav-link:hover p {
-  color: #000;
+@media (min-width: 1500px) {
+  .ps-theme .nav-link {
+    border-bottom: none;
+  }
+  .ps-theme .nav-link:hover {
+    background: linear-gradient(to bottom, #003791 50%, #000 50%);
+    background-size: 100% 200%;
+    background-position: top left;
+    transition: all 0.3s ease-out;
+  }
+  .ps-theme .nav-link:hover p {
+    color: #000;
+  }
+}
+.ps-theme .all-item-container {
+  border: 2px solid #fefefe;
+  background-color: transparent;
+}
+.ps-theme .item-wrapper {
+  border: 2px solid #003791;
+  background-color: transparent;
+}
+.ps-theme .hamburger {
+  border: 2px solid #003791;
+}
+.ps-theme #footer {
+  border-top: 6px solid #003791;
 }
 .ps-theme .link-secondary.before:before,
 .ps-theme .link-secondary.after:after,
 .ps-theme .square:before,
-.ps-theme .square:after {
+.ps-theme .square:after,
+.ps-theme .hamburger.is-active .hamburger-inner,
+.ps-theme .hamburger.is-active .hamburger-inner::before,
+.ps-theme .hamburger.is-active .hamburger-inner::after,
+.ps-theme .hamburger-inner,
+.ps-theme .hamburger-inner::before,
+.ps-theme .hamburger-inner::after {
   background-color: #003791;
 }
+@keyframes color-change {
+  0% {
+    color: #003791;
+  }
+  50% {
+    color: #fefefe;
+  }
+  100% {
+    color: #003791;
+  }
+}
 
+.xbox-theme {
+  background-color: #050505;
+}
 .xbox-theme .primary-color {
   color: #107c10;
 }
 .xbox-theme .secondary-color {
   color: #6b6b6b;
+}
+.xbox-theme .text-color {
+  color: #c2c2c2;
 }
 .xbox-theme .primary-icon {
   filter: invert(36%) sepia(46%) saturate(1448%) hue-rotate(84deg) brightness(87%) contrast(93%);
@@ -933,7 +1061,14 @@ body,
 .xbox-theme .secondary-icon {
   filter: invert(40%) sepia(0%) saturate(84%) hue-rotate(191deg) brightness(102%) contrast(89%);
 }
-.xbox-theme body {
+.xbox-theme .focus:focus {
+  outline: 1px dotted #6b6b6b;
+}
+.xbox-theme .focus-secondary:focus {
+  outline: 2px dotted #107c10;
+}
+.xbox-theme .login-form,
+.xbox-theme .full-height {
   background-color: #050505;
 }
 .xbox-theme .btn-primary {
@@ -942,6 +1077,15 @@ body,
 .xbox-theme .btn-primary:hover {
   border: 1px solid #6b6b6b;
   color: #107c10;
+}
+.xbox-theme .btn-cart {
+  border: none;
+  background-color: #6b6b6b;
+  color: #050505;
+}
+.xbox-theme .btn-cart:hover {
+  background-color: #107c10;
+  color: #050505;
 }
 .xbox-theme .input-primary {
   border: 1px solid #107c10;
@@ -958,20 +1102,59 @@ body,
 .xbox-theme .input-secondary:focus {
   border: 1px dotted #107c10;
 }
-.xbox-theme .nav-link:hover {
-  background: linear-gradient(to bottom, #6b6b6b 50%, #050505 50%);
-  background-size: 100% 200%;
-  background-position: top left;
-  transition: all 0.3s ease-out;
+.xbox-theme .nav-link {
+  border-bottom: 2px solid #6b6b6b;
 }
-.xbox-theme .nav-link:hover p {
-  color: #050505;
+@media (min-width: 1500px) {
+  .xbox-theme .nav-link {
+    border-bottom: none;
+  }
+  .xbox-theme .nav-link:hover {
+    background: linear-gradient(to bottom, #6b6b6b 50%, #050505 50%);
+    background-size: 100% 200%;
+    background-position: top left;
+    transition: all 0.3s ease-out;
+  }
+  .xbox-theme .nav-link:hover p {
+    color: #050505;
+  }
+}
+.xbox-theme .all-item-container {
+  border: 2px solid #c2c2c2;
+  background-color: transparent;
+}
+.xbox-theme .item-wrapper {
+  border: 2px solid #6b6b6b;
+  background-color: transparent;
+}
+.xbox-theme .hamburger {
+  border: 2px solid #6b6b6b;
+}
+.xbox-theme #footer {
+  border-top: 6px solid #6b6b6b;
 }
 .xbox-theme .link-secondary.before:before,
 .xbox-theme .link-secondary.after:after,
 .xbox-theme .square:before,
-.xbox-theme .square:after {
+.xbox-theme .square:after,
+.xbox-theme .hamburger.is-active .hamburger-inner,
+.xbox-theme .hamburger.is-active .hamburger-inner::before,
+.xbox-theme .hamburger.is-active .hamburger-inner::after,
+.xbox-theme .hamburger-inner,
+.xbox-theme .hamburger-inner::before,
+.xbox-theme .hamburger-inner::after {
   background-color: #6b6b6b;
+}
+@keyframes color-change {
+  0% {
+    color: #6b6b6b;
+  }
+  50% {
+    color: #107c10;
+  }
+  100% {
+    color: #6b6b6b;
+  }
 }
 
 .index-wrapper {
