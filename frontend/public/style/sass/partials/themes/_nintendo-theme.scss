@@ -104,6 +104,12 @@
     border-top: 6px solid $nintendo-secondary;
   }
 
+  .icon:hover {
+    animation-name: color-change-nintendo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
   .link-secondary.before:before,
   .link-secondary.after:after,
   .square:before,
@@ -117,7 +123,7 @@
     background-color: $nintendo-secondary;
   }
 
-  @keyframes color-change {
+  @keyframes color-change-nintendo {
     0% {
       color: $nintendo-secondary;
     }

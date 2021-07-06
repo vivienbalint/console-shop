@@ -387,11 +387,6 @@ body,
 .icon {
   cursor: pointer;
 }
-.icon:hover {
-  animation-name: color-change;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-}
 
 .icon-container {
   padding: 10px 0;
@@ -791,6 +786,11 @@ body,
 .main-theme #footer {
   border-top: 6px solid #fcbf1e;
 }
+.main-theme .icon:hover {
+  animation-name: color-change-main;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 .main-theme .link-secondary.before:before,
 .main-theme .link-secondary.after:after,
 .main-theme .square:before,
@@ -803,7 +803,7 @@ body,
 .main-theme .hamburger-inner::after {
   background-color: #fcbf1e;
 }
-@keyframes color-change {
+@keyframes color-change-main {
   0% {
     color: #fcbf1e;
   }
@@ -905,6 +905,11 @@ body,
 .nintendo-theme #footer {
   border-top: 6px solid #00c3e3;
 }
+.nintendo-theme .icon:hover {
+  animation-name: color-change-nintendo;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 .nintendo-theme .link-secondary.before:before,
 .nintendo-theme .link-secondary.after:after,
 .nintendo-theme .square:before,
@@ -917,7 +922,7 @@ body,
 .nintendo-theme .hamburger-inner::after {
   background-color: #00c3e3;
 }
-@keyframes color-change {
+@keyframes color-change-nintendo {
   0% {
     color: #00c3e3;
   }
@@ -1019,6 +1024,11 @@ body,
 .ps-theme #footer {
   border-top: 6px solid #003791;
 }
+.ps-theme .icon:hover {
+  animation-name: color-change-ps;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 .ps-theme .link-secondary.before:before,
 .ps-theme .link-secondary.after:after,
 .ps-theme .square:before,
@@ -1031,7 +1041,7 @@ body,
 .ps-theme .hamburger-inner::after {
   background-color: #003791;
 }
-@keyframes color-change {
+@keyframes color-change-ps {
   0% {
     color: #003791;
   }
@@ -1133,6 +1143,11 @@ body,
 .xbox-theme #footer {
   border-top: 6px solid #6b6b6b;
 }
+.xbox-theme .icon:hover {
+  animation-name: color-change-xbox;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
 .xbox-theme .link-secondary.before:before,
 .xbox-theme .link-secondary.after:after,
 .xbox-theme .square:before,
@@ -1145,7 +1160,7 @@ body,
 .xbox-theme .hamburger-inner::after {
   background-color: #6b6b6b;
 }
-@keyframes color-change {
+@keyframes color-change-xbox {
   0% {
     color: #6b6b6b;
   }

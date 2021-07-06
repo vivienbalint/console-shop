@@ -100,6 +100,12 @@
     border-top: 6px solid $ps-secondary;
   }
 
+  .icon:hover {
+    animation-name: color-change-ps;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
   .link-secondary.before:before,
   .link-secondary.after:after,
   .square:before,
@@ -113,7 +119,7 @@
     background-color: $ps-secondary;
   }
 
-  @keyframes color-change {
+  @keyframes color-change-ps {
     0% {
       color: $ps-secondary;
     }

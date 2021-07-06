@@ -18,9 +18,11 @@ export default function PsPage() {
       >
         <PsAccessories size={2} />
       </AllItemComponent>
-      <AllItemComponent componentTitle="Games" route="/playstation/games">
-        <PsGames size={2} />
-      </AllItemComponent>
+      <div className="games">
+        <AllItemComponent componentTitle="Games" route="/playstation/games">
+          <PsGames size={2} />
+        </AllItemComponent>
+      </div>
     </div>
   );
 }

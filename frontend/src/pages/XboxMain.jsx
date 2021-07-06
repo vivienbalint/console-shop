@@ -19,9 +19,11 @@ const SubComponents = () => {
       <AllItemComponent componentTitle="Accessories" route="/xbox/accessories">
         <XboxAccessories size={2} />
       </AllItemComponent>
-      <AllItemComponent componentTitle="Games" route="/xbox/games">
-        <XboxGames size={2} />
-      </AllItemComponent>
+      <div className="games">
+        <AllItemComponent componentTitle="Games" route="/xbox/games">
+          <XboxGames size={2} />
+        </AllItemComponent>
+      </div>
     </div>
   );
 };

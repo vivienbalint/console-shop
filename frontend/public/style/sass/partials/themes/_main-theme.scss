@@ -104,6 +104,12 @@
     border-top: 6px solid $main-secondary;
   }
 
+  .icon:hover {
+    animation-name: color-change-main;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
   .link-secondary.before:before,
   .link-secondary.after:after,
   .square:before,
@@ -117,7 +123,7 @@
     background-color: $main-secondary;
   }
 
-  @keyframes color-change {
+  @keyframes color-change-main {
     0% {
       color: $main-secondary;
     }

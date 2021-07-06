@@ -18,9 +18,11 @@ export default function NintendoPage() {
       >
         <NintendoAccessories size={2} />
       </AllItemComponent>
-      <AllItemComponent componentTitle="Games" route="/nintendo/games">
-        <NintendoGames size={2} />
-      </AllItemComponent>
+      <div className="games">
+        <AllItemComponent componentTitle="Games" route="/nintendo/games">
+          <NintendoGames size={2} />
+        </AllItemComponent>
+      </div>
     </div>
   );
 }

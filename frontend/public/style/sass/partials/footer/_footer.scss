@@ -1,11 +1,6 @@
 @import "../variables";
 @import "../mediaquery";
 
-// #page-container {
-//   position: relative;
-//   min-height: 100vh;
-// }
-
 #footer {
   display: flex;
   flex-direction: column;
@@ -82,11 +77,6 @@
 
 .icon {
   cursor: pointer;
-  &:hover {
-    animation-name: color-change;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-  }
 }
 
 .icon-container {
