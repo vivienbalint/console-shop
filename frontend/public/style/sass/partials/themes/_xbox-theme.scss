@@ -86,7 +86,7 @@
     }
   }
 
-  .all-item-container {
+  .item-border {
     border: 2px solid $xbox-text;
     background-color: transparent;
   }
@@ -94,6 +94,41 @@
   .item-wrapper {
     border: 2px solid $xbox-secondary;
     background-color: transparent;
+  }
+
+  .component-wrapper {
+    background: {
+      image: $xbox-brush-bg;
+      size: 100% auto;
+      position: center 80%;
+      repeat: no-repeat;
+    }
+
+    @include respond-to("tablet") {
+      background-position: center right 70px;
+      background-size: auto 100%;
+    }
+
+    @include respond-to("desktop") {
+      background-size: unset;
+    }
+
+    .main-component-img {
+      width: 100%;
+
+      @include respond-to("tablet") {
+        height: 300px;
+      }
+
+      @include respond-to("desktop-small") {
+        height: 400px;
+        width: auto;
+      }
+
+      @include respond-to("desktop") {
+        height: 700px;
+      }
+    }
   }
 
   .hamburger {

@@ -48,3 +48,21 @@ $nintendo-icon-primary: invert(10%) sepia(100%) saturate(7052%)
   hue-rotate(351deg) brightness(87%) contrast(108%);
 $nintendo-icon-secondary: invert(78%) sepia(25%) saturate(6464%)
   hue-rotate(140deg) brightness(87%) contrast(105%);
+
+// BACKGROUND IMAGES
+
+$mobile-bg-img: url("/images/main-img-mobile.jpg");
+$tablet-bg-img: url("/images/main-img-tablet.jpg");
+$desktop-bg-img: url("/images/main-img-medium.jpg");
+
+// Xbox
+
+$xbox-brush-bg: url("/images/xbox-brush-bg.png");
+
+// PS
+
+$ps-brush-bg: url("/images/ps-brush-bg.png");
+
+// Nintendo
+
+$nintendo-brush-bg: url("/images/nintendo-brush-bg.png");

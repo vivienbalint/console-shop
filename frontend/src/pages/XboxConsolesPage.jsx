@@ -8,7 +8,7 @@ export default function XboxConsolesPage() {
   let isSmall = useWindowSize();
   if (isSmall) {
     return (
-      <div className="main-container all-item-container flex-wrap">
+      <div className="main-container all-item-container item-border flex-wrap">
         <XboxConsoles size={1000} />
       </div>
     );

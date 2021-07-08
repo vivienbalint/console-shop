@@ -4,7 +4,7 @@ import { XboxGames, NintendoGames, PsGames } from "../components/ApiComponents";
 
 export default function Games() {
   return (
-    <div className="main-container all-item-container games">
+    <div className="main-container all-item-container item-border games">
       <AllItemComponent componentTitle="Xbox Series Games" route="/xbox/games">
         <XboxGames size={2} />
       </AllItemComponent>

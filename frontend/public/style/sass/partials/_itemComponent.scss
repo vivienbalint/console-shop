@@ -8,6 +8,14 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 
+  @include respond-to("tablet") {
+    margin: 100px 0 25px;
+  }
+
+  @include respond-to("desktop") {
+    margin: 80px 0 25px;
+  }
+
   .all-item-wrapper {
     padding: 25px 10px 20px;
     display: flex;
@@ -15,7 +23,7 @@
     align-items: center;
 
     @include respond-to("desktop") {
-      padding: 25px 10px;
+      padding: 25px 0;
     }
   }
 
@@ -28,12 +36,23 @@
   }
 }
 
+.sub-component-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+
+  @include respond-to("desktop") {
+    justify-content: space-between;
+  }
+}
+
 .item {
   &-wrapper {
     width: 240px;
     height: 250px;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 0;
     display: flex;
     text-align: center;
 
@@ -83,27 +102,61 @@
 }
 
 .component-wrapper {
+  opacity: 0.9;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  .main-component-text-wrapper {
-    // width: 700px;
+  justify-content: center;
+
+  @include respond-to("tablet") {
+    flex-direction: row;
+    align-items: unset;
+  }
+
+  @include respond-to("desktop-small") {
+    align-items: center;
+  }
+
+  .main-component-img {
+    width: 100%;
+
+    @include respond-to("tablet") {
+      height: 300px;
+    }
+
+    @include respond-to("desktop-small") {
+      height: 400px;
+      width: auto;
+    }
+
+    @include respond-to("desktop") {
+      height: 700px;
+    }
   }
 
   .main-component-text {
-    font-size: 25px;
+    font-size: 17px;
     line-height: 150%;
-  }
-}
+    text-align: justify;
+    padding: 15px;
 
-.main-component-img {
-  width: 100vw;
+    @include respond-to("mobile") {
+      font-size: 20px;
+    }
 
-  @include respond-to("tablet") {
-    height: 500px;
-    width: auto;
-  }
+    @include respond-to("tablet") {
+      font-size: 17px;
+      text-align: left;
+    }
 
-  @include respond-to("desktop") {
-    height: 700px;
+    @include respond-to("desktop-small") {
+      font-size: 20px;
+    }
+
+    @include respond-to("desktop") {
+      font-size: 28px;
+      line-height: 170%;
+      padding: unset;
+    }
   }
 }

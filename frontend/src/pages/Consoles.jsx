@@ -8,7 +8,7 @@ import {
 
 export default function Consoles() {
   return (
-    <div className="main-container all-item-container">
+    <div className="main-container all-item-container item-border">
       <AllItemComponent
         componentTitle="Xbox Series Consoles"
         route="/xbox/consoles"

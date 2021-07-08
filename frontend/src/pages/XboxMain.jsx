@@ -12,7 +12,7 @@ import mobileImg from "../public/images/xbox-mobile.png";
 
 const SubComponents = () => {
   return (
-    <div className="main-container all-item-container">
+    <div className="sub-component-container">
       <AllItemComponent componentTitle="Consoles" route="/xbox/consoles">
         <XboxConsoles size={2} />
       </AllItemComponent>
@@ -33,11 +33,11 @@ export default function XboxPage() {
 
   if (isSmall) {
     return (
-      <div>
+      <div className="main-container all-item-container item-border">
         <MainPageComponent
           imgSrc={mobileImg}
           alt="Xbox Series S"
-          text="Introducing the Xbox Series S, the smallest, sleekest Xbox console ever. Experience the speed and performance of a next-gen all-digital console at an accessible price point. Get started with an instant library of 100+ high quality games, including all new Xbox Game Studios titles like Halo Infinite the day they release, when you add Xbox Game Pass Ultimate (membership sold separately). Seamlessly move between multiple games in a flash with Quick Resume. At the heart of Series S is the Xbox Velocity Architecture, which pairs a custom-SSD with integrated software for faster, streamlined gameplay with significantly reduced load times."
+          text="Introducing the Xbox Series S, the smallest, sleekest Xbox console ever. Experience the speed and performance of a next-gen all-digital console at an accessible price point. Seamlessly move between multiple games in a flash with Quick Resume. At the heart of Series S is the Xbox Velocity Architecture, which pairs a custom-SSD with integrated software for faster, streamlined gameplay with significantly reduced load times."
         />
         <SubComponents />
       </div>
@@ -48,7 +48,7 @@ export default function XboxPage() {
         <MainPageComponent
           imgSrc={desktopImg}
           alt="Xbox Series S"
-          text="Introducing the Xbox Series S, the smallest, sleekest Xbox console ever. Experience the speed and performance of a next-gen all-digital console at an accessible price point. Get started with an instant library of 100+ high quality games, including all new Xbox Game Studios titles like Halo Infinite the day they release, when you add Xbox Game Pass Ultimate (membership sold separately). Seamlessly move between multiple games in a flash with Quick Resume. At the heart of Series S is the Xbox Velocity Architecture, which pairs a custom-SSD with integrated software for faster, streamlined gameplay with significantly reduced load times."
+          text="Introducing the Xbox Series S, the smallest, sleekest Xbox console ever. Experience the speed and performance of a next-gen all-digital console at an accessible price point. Seamlessly move between multiple games in a flash with Quick Resume. At the heart of Series S is the Xbox Velocity Architecture, which pairs a custom-SSD with integrated software for faster, streamlined gameplay with significantly reduced load times."
         />
         <SubComponents />
       </div>
