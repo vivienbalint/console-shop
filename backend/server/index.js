@@ -14,17 +14,13 @@ require("@babel/core").transform("code", {
   presets: ["@babel/preset-env"],
 });
 const app = express();
-const port = 3000;
+const port = 3020;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(bodyParser.json());
 
 db.on("error", console.error.bind(console, "MongoDB connection error: "));
-
-app.get("/", (req, res) => {
-  res.send("It Works!");
-});
 
 app.use("/api", inventoryRouter);
 

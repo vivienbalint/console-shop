@@ -1,4 +1,8 @@
+const express = require("express");
 const Item = require("../db/models/inventory-model");
+const app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 createItem = (req, res) => {
   const body = req.body;
@@ -272,6 +276,18 @@ getNintendoGames = async (req, res) => {
   ).catch((err) => console.log(err));
 };
 
+getSearchedItems = async (req, res) => {
+  await Item.find({ $text: { $search: req.params.input } }, (err, items) => {
+    if (err) {
+      return res.status(400).json({ success: false, error: err });
+    }
+    if (!items.length) {
+      return res.status(404).json({ success: false, error: `Item not found` });
+    }
+    return res.status(200).json({ success: true, data: items });
+  }).catch((err) => console.log(err));
+};
+
 module.exports = {
   createItem,
   updateItem,
@@ -287,4 +303,5 @@ module.exports = {
   getPsGames,
   getXboxGames,
   getNintendoGames,
+  getSearchedItems,
 };

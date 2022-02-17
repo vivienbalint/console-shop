@@ -1,7 +1,7 @@
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: "http://localhost:3020/api",
 });
 
 export const getAllConsoles = () => api.get(`/consoles`);
@@ -15,6 +15,20 @@ export const getPsGames = () => api.get(`/games/playstation`);
 export const getXboxGames = () => api.get(`/games/xbox`);
 export const getNintendoGames = () => api.get(`/games/nintendo`);
 
+const getSearchedItems = async (input) => {
+  const requestConfig = {
+    method: "get",
+    url: `http://localhost:3020/api/results/${input}`,
+    data: Response,
+  };
+  try {
+    const { data } = await axios.request(requestConfig);
+    return { res: data };
+  } catch (err) {
+    return { error: err };
+  }
+};
+
 const apis = {
   getAllConsoles,
   getPsConsoles,
@@ -26,6 +40,7 @@ const apis = {
   getPsGames,
   getXboxGames,
   getNintendoGames,
+  getSearchedItems,
 };
 
 export default apis;

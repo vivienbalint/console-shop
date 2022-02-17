@@ -18,5 +18,6 @@ router.get("/accessories/nintendo", InventoryCtrl.getNintendoAccessories);
 router.get("/games/playstation", InventoryCtrl.getPsGames);
 router.get("/games/xbox", InventoryCtrl.getXboxGames);
 router.get("/games/nintendo", InventoryCtrl.getNintendoGames);
+router.get("/results/:input", InventoryCtrl.getSearchedItems);
 
 module.exports = router;

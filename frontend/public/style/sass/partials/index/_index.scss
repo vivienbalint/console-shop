@@ -1,10 +1,6 @@
 @import "../mediaquery";
 @import "../variables";
 
-$mobile-bg-img: url("../../../../images/main-img-mobile.jpg");
-$tablet-bg-img: url("../../../../images/main-img-tablet.jpg");
-$desktop-bg-img: url("../../../../images/main-img-medium.jpg");
-
 .index-wrapper {
   background: {
     image: $mobile-bg-img;

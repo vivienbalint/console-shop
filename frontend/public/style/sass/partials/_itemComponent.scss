@@ -117,23 +117,6 @@
     align-items: center;
   }
 
-  .main-component-img {
-    width: 100%;
-
-    @include respond-to("tablet") {
-      height: 300px;
-    }
-
-    @include respond-to("desktop-small") {
-      height: 400px;
-      width: auto;
-    }
-
-    @include respond-to("desktop") {
-      height: 700px;
-    }
-  }
-
   .main-component-text {
     font-size: 17px;
     line-height: 150%;

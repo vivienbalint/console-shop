@@ -23,4 +23,9 @@ mongoose
     console.error("Connection error", e.message);
   });
 const db = mongoose.connection;
+db.collection("inventories").createIndex({
+  "$**": "text",
+  on_stock: 1,
+  price: 1,
+});
 module.exports = db;

@@ -2,17 +2,17 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const inventorySchema = new Schema({
-  name: { type: String, required: true, index: true },
-  main_category: { type: String, required: true, index: true },
-  sub_category: { type: String, required: true, index: true },
-  genre: { type: String, index: true },
+  name: { type: String, required: true },
+  main_category: { type: String, required: true },
+  sub_category: { type: String, required: true },
+  genre: { type: String },
   release_date: { type: Date },
   description: { type: String },
   image: [{ type: String }],
   metacritic_rating: { type: Number },
-  on_stock: { type: Boolean, required: true, index: true },
+  on_stock: { type: Boolean, required: true },
   nr_on_stock: { type: Number, required: true },
-  price: { type: Number, index: true },
+  price: { type: Number },
   orders: [{ type: Schema.Types.ObjectId, ref: "Order" }],
 });
 

@@ -11,6 +11,7 @@ import XboxPage from "../pages/XboxMain";
 import NintendoPage from "../pages/NintendoMain";
 import PsPage from "../pages/PsMain";
 import XboxConsolesPage from "../pages/XboxConsolesPage";
+import SearchResults from "../pages/SearchResults";
 
 const Wrapper = ({ children }) => {
   const location = useLocation().pathname;
@@ -70,6 +71,9 @@ function App() {
           </LazyLoad>
           <LazyLoad>
             <Route exact path="/xbox/consoles" component={XboxConsolesPage} />
+          </LazyLoad>
+          <LazyLoad>
+            <Route path="/results/:slug" />
           </LazyLoad>
           <Footer />
         </div>
